@@ -1,5 +1,6 @@
 " let pathogen to load other plugins
 call pathogen#infect() 
+call pathogen#helptags()
 
 " show line numbers
 set number
@@ -8,6 +9,15 @@ highlight ColorColumn ctermbg=233
 " split NERDTree and List horizotally
 let Tlist_Use_Split_Window = 1
 com TT NERDTree | TlistToggle
+
+" Set Solarized Color
+syntax enable
+if has('gui_running')
+    set background=light
+else
+    set background=light
+endif
+colorscheme solarized
 
 " some python cusomization
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅

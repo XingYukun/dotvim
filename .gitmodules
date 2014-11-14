@@ -10,3 +10,11 @@
 	path = bundle/ctags
 	url = https://github.com/vim-jp/ctags.git
 	ignore = dirty
+[submodule "bundle/python-mode"]
+	path = bundle/python-mode
+	url = https://github.com/klen/python-mode.git
+	ignore = dirty
+[submodule "bundle/solarized"]
+	path = bundle/solarized
+	url = https://github.com/altercation/solarized.git
+	ignore = dirty
