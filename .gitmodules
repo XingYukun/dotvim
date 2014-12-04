@@ -18,3 +18,7 @@
 	path = bundle/solarized
 	url = https://github.com/altercation/solarized.git
 	ignore = dirty
+[submodule "bundle/conque"]
+	path = bundle/conque
+	url = https://github.com/nicoraffo/conque.git
+	ignore = dirty

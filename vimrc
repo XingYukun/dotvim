@@ -13,9 +13,9 @@ com TT NERDTree | TlistToggle
 " Set Solarized Color
 syntax enable
 if has('gui_running')
-    set background=light
+    set background=dark
 else
-    set background=light
+    set background=dark
 endif
 colorscheme solarized
 
@@ -51,3 +51,24 @@ map <silent>,h <C-w>h
 map <silent>,j <C-w>j
 map <silent>,k <C-w>k
 map <silent>,l <C-w>l
+
+if &term =~ "xterm"
+  " 256 colors
+  let &t_Co = 256
+  " restore screen after quitting
+  let &t_ti = "\<Esc>7\<Esc>[r\<Esc>[?47h"
+  let &t_te = "\<Esc>[?47l\<Esc>8"
+  if has("terminfo")
+    let &t_Sf = "\<Esc>[3%p1%dm"
+    let &t_Sb = "\<Esc>[4%p1%dm"
+  else
+    let &t_Sf = "\<Esc>[3%dm"
+    let &t_Sb = "\<Esc>[4%dm"
+  endif
+endif
+
+" Rope AutoComplete
+let ropevim_vim_completion = 1
+let ropevim_extended_complete = 1
+let g:ropevim_autoimport_modules = ["os.*","traceback","django.*","xml.etree"]
+imap <c-space> <C-R>=RopeCodeAssistInsertMode()<CR>
