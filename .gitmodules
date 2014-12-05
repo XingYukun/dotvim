@@ -18,3 +18,7 @@
 	path = bundle/conque
 	url = https://github.com/nicoraffo/conque.git
 	ignore = dirty
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+	ignore = dirty
